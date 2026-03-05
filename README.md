@@ -38,6 +38,8 @@ Alternatively, you can install CLTR directly via Pip:
 ```bash
 git clone https://github.com/tomarp/CLTR_test
 cd CLTR_test
+conda env create -f environment.yml
+conda activate cltr
 pip install -e .
 ```
 
