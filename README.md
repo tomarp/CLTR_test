@@ -15,25 +15,32 @@ CLTR is a modular software package designed for the preprocessing, analysis, and
 
 ## Installation
 
-### Using Pip
+### Recommended: Using Conda
 
-Install CLTR directly from the source in editable mode:
+The easiest way to set up CLTR is using Conda. This ensures all physiological processing libraries (like NeuroKit2) and visualization tools are correctly configured.
 
 ```bash
+# Clone the repository
 git clone https://github.com/tomarp/CLTR_test
 cd CLTR_test
-pip install -e .
+
+# Create and activate the conda environment
+conda env create -f environment.yml
+conda activate cltr
 ```
 
-### Using Conda
+The `environment.yml` installs all core dependencies (NumPy, Pandas, SciPy, Matplotlib, Plotly, NeuroKit2) via Conda channels wherever possible.
 
-You can create a dedicated Conda environment using the provided `environment.yml` file:
+### Using Pip
+
+Alternatively, you can install CLTR directly via Pip:
 
 ```bash
 git clone https://github.com/tomarp/CLTR_test
 cd CLTR_test
 conda env create -f environment.yml
 conda activate cltr
+pip install -e .
 ```
 
 ## Command-Line Usage
