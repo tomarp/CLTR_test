@@ -1,0 +1,15 @@
+name: cltr
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python>=3.8
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - plotly
+  - neurokit2
+  - pip
+  - pip:
+      - -e .
