@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cltr"
+version = "0.1.0"
+description = "CLTR: Empatica wearable physiology pipeline"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scipy",
+    "matplotlib",
+    "plotly",
+    "neurokit2",
+]
+
+[project.scripts]
+cltr-pipeline = "cltr.cli:main"
+
+[tool.setuptools]
+packages = ["cltr"]
+
+[tool.setuptools.package-dir]
+cltr = "src"
