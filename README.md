@@ -15,6 +15,8 @@ CLTR is a modular software package designed for the preprocessing, analysis, and
 
 ## Installation
 
+### Using Pip
+
 Install CLTR directly from the source in editable mode:
 
 ```bash
@@ -23,12 +25,16 @@ cd CLTR_test
 pip install -e .
 ```
 
-### Dependencies
+### Using Conda
 
-- Python >= 3.8
-- NumPy, Pandas, SciPy
-- Matplotlib, Plotly
-- NeuroKit2 (required for EDA/BVP processing)
+You can create a dedicated Conda environment using the provided `environment.yml` file:
+
+```bash
+git clone https://github.com/tomarp/CLTR_test
+cd CLTR_test
+conda env create -f environment.yml
+conda activate cltr
+```
 
 ## Command-Line Usage
 
