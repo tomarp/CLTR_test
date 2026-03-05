@@ -27,12 +27,12 @@ def ensure_datetime_utc(df: pd.DataFrame, ts_col_candidates: List[str]) -> pd.Da
     df = df.loc[df[ts_col].astype(str) != str(ts_col)].copy()
     s = df[ts_col]
 
-    if not np.issubdtype(s.dtype, np.number):
+    if not pd.api.types.is_numeric_dtype(s):
         s_num = pd.to_numeric(s, errors="coerce")
         if s_num.notna().mean() > 0.95:
             s = s_num
 
-    if np.issubdtype(s.dtype, np.number):
+    if pd.api.types.is_numeric_dtype(s):
         x = pd.to_numeric(s, errors="coerce")
         if x.dropna().empty:
             raise ValueError("All timestamps are NaN.")
